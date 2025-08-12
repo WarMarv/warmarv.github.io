@@ -50,8 +50,6 @@ const Qualifications = () => {
                 title="Betriebssysteme"
                 items={[{ label: "Linux", value: "> 8 Jahr(e)" }]}
               />
-            </div>
-            <div>
               <Block
                 title="Programmiersprachen"
                 items={[
@@ -73,6 +71,8 @@ const Qualifications = () => {
                   { label: "Visual Studio, VS Code, IntelliJ IDEA", value: "> 5 Jahr(e)" },
                 ]}
               />
+            </div>
+            <div>
               <Block
                 title="Methoden"
                 items={[
