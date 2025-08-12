@@ -1,0 +1,77 @@
+name: Deploy Vite site to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Detect package manager
+        id: pm
+        run: |
+          if [ -f bun.lockb ]; then echo "manager=bun" >> $GITHUB_OUTPUT; elif [ -f pnpm-lock.yaml ]; then echo "manager=pnpm" >> $GITHUB_OUTPUT; elif [ -f yarn.lock ]; then echo "manager=yarn" >> $GITHUB_OUTPUT; else echo "manager=npm" >> $GITHUB_OUTPUT; fi
+
+      - name: Setup Bun
+        if: steps.pm.outputs.manager == 'bun'
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Node (fallback)
+        if: steps.pm.outputs.manager != 'bun'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: ${{ steps.pm.outputs.manager }}
+
+      - name: Install deps
+        run: |
+          if [ "${{ steps.pm.outputs.manager }}" = bun ]; then bun install --frozen-lockfile; \
+          elif [ "${{ steps.pm.outputs.manager }}" = pnpm ]; then corepack enable && pnpm install --frozen-lockfile; \
+          elif [ "${{ steps.pm.outputs.manager }}" = yarn ]; then yarn install --frozen-lockfile; \
+          else npm install; fi
+
+      - name: Build
+        run: |
+          if [ "${{ steps.pm.outputs.manager }}" = bun ]; then bun run build; \
+          elif [ "${{ steps.pm.outputs.manager }}" = pnpm ]; then pnpm run build; \
+          elif [ "${{ steps.pm.outputs.manager }}" = yarn ]; then yarn build; \
+          else npm run build; fi
+
+      - name: Add .nojekyll & SPA fallback
+        run: |
+          cp .nojekyll dist/. 2>/dev/null || true
+          cp CNAME dist/. 2>/dev/null || true
+          # React Router fallback for client-side routing
+          cp dist/index.html dist/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
