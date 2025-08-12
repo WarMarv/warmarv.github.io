@@ -15,11 +15,10 @@ const Hero = () => {
 
   return (
     <header
-      className="spotlight relative overflow-hidden rounded-2xl border bg-card/60 p-8 md:p-12 shadow-soft"
+      className="spotlight relative overflow-hidden rounded-2xl border bg-card/60 p-6 sm:p-8 md:p-12 shadow-soft"
       style={{ ['--x' as any]: `${pos.x}px`, ['--y' as any]: `${pos.y}px` }}
     >
       <div className="max-w-3xl mx-auto text-center">
-        <p className="mb-3 text-sm text-muted-foreground">Portfolio</p>
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
           <span className="text-gradient-primary">Marvin Warnke</span>
         </h1>
@@ -30,12 +29,12 @@ const Hero = () => {
           <Badge variant="secondary">Oracle SQL • React • Python • Git</Badge>
           <Badge variant="secondary">Datawarehouse • ERP Infor</Badge>
         </div>
-        <div className="mt-8 flex items-center justify-center gap-4">
-          <Button asChild variant="hero" size="lg">
-            <a href="#projects" aria-label="Zu den Projekten springen">Projekte ansehen</a>
+        <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
+          <Button asChild variant="hero" size="lg" className="w-full sm:w-auto min-w-0 sm:min-w-[10rem]">
+            <a href="#projects" aria-label="Zu den Projekten springen" className="inline-flex w-full justify-center">Projekte ansehen</a>
           </Button>
-          <Button asChild variant="outline" size="lg">
-            <a href="mailto:kontakt@marvin-warnke.dev" aria-label="E-Mail an Marvin senden">Kontakt aufnehmen</a>
+          <Button asChild variant="hero" size="lg" className="w-full sm:w-auto min-w-0 sm:min-w-[10rem]">
+            <a href="mailto:mawrx.dev@gmail.com" aria-label="E-Mail an Marvin senden" className="inline-flex w-full justify-center">Kontakt aufnehmen</a>
           </Button>
         </div>
       </div>
