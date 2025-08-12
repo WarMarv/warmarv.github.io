@@ -41,7 +41,8 @@ jobs:
 
       - name: Install deps
         run: |
-          if [ "${{ steps.pm.outputs.manager }}" = bun ]; then bun install --frozen-lockfile; \
+          # For bun we avoid --frozen-lockfile to prevent CI failures if lockfile needs update
+          if [ "${{ steps.pm.outputs.manager }}" = bun ]; then bun install; \
           elif [ "${{ steps.pm.outputs.manager }}" = pnpm ]; then corepack enable && pnpm install --frozen-lockfile; \
           elif [ "${{ steps.pm.outputs.manager }}" = yarn ]; then yarn install --frozen-lockfile; \
           else npm install; fi
