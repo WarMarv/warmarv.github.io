@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung - Wohngeldrechner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #2980b9;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 15px 0 15px 30px;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dotted #3498db;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: #2980b9;
+            border-bottom: 1px solid #2980b9;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .contact-box {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3498db;
+        }
+
+        .contact-box strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            h3 {
+                font-size: 1.1em;
+            }
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Datenschutzerklärung</h1>
+
+        <div class="section">
+            <h3>1. Verantwortlicher und Kontakt</h3>
+            <p>Marvin Warnke<br>Email: mawrx.dev@gmail.com</p>
+        </div>
+
+        <div class="section">
+            <h3>2. Welche Daten werden verarbeitet?</h3>
+            <p>Die Wohngeldrechner-App verarbeitet folgende Daten ausschließlich lokal auf Ihrem Gerät:</p>
+
+            <p><strong>Persönliche Informationen:</strong></p>
+            <ul>
+                <li>Namen von Haushaltsmitgliedern</li>
+                <li>Anzahl der Haushaltsmitglieder</li>
+                <li>Informationen über Behinderungen von Haushaltsmitgliedern</li>
+                <li>Familienstand (Alleinerziehend)</li>
+            </ul>
+
+            <p><strong>Finanzielle Informationen:</strong></p>
+            <ul>
+                <li>Mietbetrag/Belastung (Kaltmiete)</li>
+                <li>Einkommen</li>
+                <li>Einkommensteuer, Kranken- und Rentenversicherungsbeiträge</li>
+            </ul>
+
+            <p><strong>Standortinformationen:</strong></p>
+            <ul>
+                <li>Postleitzahl</li>
+                <li>Stadt/Landkreis</li>
+                <li>Mietstufe</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>3. Wie werden diese Daten verarbeitet?</h3>
+
+            <p><strong>Lokale Speicherung:</strong></p>
+            <ul>
+                <li>Alle Ihre Daten werden ausschließlich auf Ihrem Gerät in einer lokalen Datenbank gespeichert</li>
+                <li>Ihre Daten werden NICHT an Server oder Cloud-Dienste übertragen</li>
+                <li>Ihre Daten werden NICHT mit externen Partnern geteilt</li>
+                <li>Alle Berechnungen finden lokal auf Ihrem Gerät statt</li>
+            </ul>
+
+            <p><strong>Keine Weitergabe an Dritte:</strong></p>
+            <ul>
+                <li>Ihre Daten werden nicht an Wohngeldämter, Behörden oder andere Stellen übertragen</li>
+                <li>Die App sammelt keine Analysedaten über Ihr Nutzungsverhalten</li>
+                <li>Es gibt keine Benutzerkonten oder Benutzer-IDs</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>4. Werbung (Google AdMob)</h3>
+            <p>Die App zeigt personalisierte Anzeigen mittels Google AdMob an. Dabei gilt:</p>
+            <ul>
+                <li>Werbung wird standardmäßig mit der Einstellung "non-personalized ads" angezeigt</li>
+                <li>Google erhält keine Daten aus Ihrer Wohngeldberechnung</li>
+                <li>Mehr Informationen: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>5. Datenspeicherung und Löschung</h3>
+
+            <p><strong>Speicherung:</strong></p>
+            <ul>
+                <li>Ihre aktuelle Berechnung bleibt gespeichert, bis Sie diese löschen</li>
+                <li>Sie können auch einzelne gespeicherte Berechnungen jederzeit löschen</li>
+                <li>Die Daten werden beim Deinstallieren der App gelöscht</li>
+            </ul>
+
+            <p><strong>Manuelle Löschung:</strong></p>
+            <ul>
+                <li>Öffnen Sie den Verlauf in der App</li>
+                <li>Wählen Sie bei der Berechnung "Löschen"</li>
+                <li>Bestätigen Sie die Löschung</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>6. Ihre Rechte</h3>
+            <p>Sie haben folgende Rechte bezüglich Ihrer personenbezogenen Daten:</p>
+            <ul>
+                <li><strong>Zugriff:</strong> Alle Ihre Daten sind in der App einsehbar</li>
+                <li><strong>Änderung:</strong> Sie können Ihre Daten jederzeit in der App ändern</li>
+                <li><strong>Löschung:</strong> Sie können Ihre Daten jederzeit löschen</li>
+            </ul>
+            <p>Da Ihre Daten lokal gespeichert sind, können Sie diese vollständig kontrollieren.</p>
+        </div>
+
+        <div class="section">
+            <h3>7. Sicherheit</h3>
+            <ul>
+                <li>Ihre Daten werden nur lokal auf Ihrem Gerät gespeichert</li>
+                <li>Es gibt keine Datenübertragung über das Internet</li>
+                <li>Die SQLite-Datenbank wird durch das Betriebssystem geschützt</li>
+                <li>Nur die App selbst kann auf diese Daten zugreifen</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>8. Rechtliche Grundlage</h3>
+            <p>Die Verarbeitung Ihrer Daten erfolgt auf Grundlage von:</p>
+            <ul>
+                <li>Ihrer Einwilligung zur Nutzung der App</li>
+                <li>Erforderlichkeit zur Erbringung der Wohngeldberechnung</li>
+                <li>Berechtigtes Interesse an lokaler Datenverarbeitung</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>9. Änderungen dieser Datenschutzerklärung</h3>
+            <p>Diese Datenschutzerklärung kann jederzeit aktualisiert werden. Wichtige Änderungen werden in den App-Release-Notes bekannt gegeben.</p>
+        </div>
+
+        <footer>
+            <p>Datenschutzerklärung für Wohngeldrechner App</p>
+            <p>Zuletzt aktualisiert: 10.11.2025</p>
+        </footer>
+    </div>
+</body>
+</html>
