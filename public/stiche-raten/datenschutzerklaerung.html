@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutzerklärung – Stiche-Raten</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #2980b9;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 15px 0 15px 30px;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dotted #3498db;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Datenschutzerklärung</h1>
+
+        <div class="section">
+            <h3>1. Verantwortlicher</h3>
+            <p>
+                Marvin Warnke<br>
+                E-Mail: mawrx.dev@gmail.com
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>2. Allgemeines</h3>
+            <p>
+                Der Schutz Ihrer Daten ist mir wichtig. Die App <strong>Stiche-Raten</strong>
+                wurde so entwickelt, dass keine personenbezogenen Daten an externe Server
+                übertragen werden. Alle Daten werden ausschließlich lokal auf Ihrem Gerät gespeichert.
+            </p>
+            <p>
+                Die App dient als Punktezähler für das Kartenspiel "Elfer raus" und speichert
+                Spielernamen, Spielstände und Spielhistorien lokal auf Ihrem Gerät.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>3. Welche Daten werden verarbeitet?</h3>
+
+            <p><strong>Spielerdaten:</strong></p>
+            <ul>
+                <li>Spielernamen</li>
+                <li>Spielerreihenfolge</li>
+                <li>Aktiv-/Inaktiv-Status der Spieler</li>
+            </ul>
+
+            <p><strong>Spieldaten:</strong></p>
+            <ul>
+                <li>Schätzungen und tatsächlich gewonnene Stiche pro Runde</li>
+                <li>Punktestände</li>
+                <li>Rundendetails</li>
+                <li>Datum und Uhrzeit von Spielen</li>
+            </ul>
+
+            <p><strong>Statistiken:</strong></p>
+            <ul>
+                <li>Gewinnraten der Spieler</li>
+                <li>Spielhistorie mit Platzierungen</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>4. Wie werden die Daten verarbeitet?</h3>
+
+            <ul>
+                <li>Alle Daten werden ausschließlich <strong>lokal auf Ihrem Gerät</strong> in einer SQLite-Datenbank gespeichert</li>
+                <li>Es findet <strong>keine Übertragung</strong> an Server oder Cloud-Dienste statt</li>
+                <li>Es gibt <strong>keine Benutzerkonten</strong> und keine Anmeldung</li>
+                <li>Die App nutzt keine Analyse- oder Tracking-Dienste</li>
+            </ul>
+
+            <p>
+                Alle Berechnungen und Speicherungen erfolgen offline direkt auf Ihrem Gerät.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>5. Weitergabe an Dritte</h3>
+            <ul>
+                <li>Es erfolgt <strong>keine Weitergabe</strong> Ihrer Daten an Dritte</li>
+                <li>Es werden keine Daten an Google, Apple oder andere Anbieter gesendet</li>
+                <li>Die App enthält keine Werbung und keine In-App-Tracker</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>6. Speicherung und Löschung</h3>
+
+            <ul>
+                <li>Spielerdaten und Spielhistorie werden lokal auf Ihrem Gerät gespeichert</li>
+                <li>Sie können einzelne Spieler oder Spielhistorien jederzeit in der App löschen</li>
+                <li>Beim Deinstallieren der App werden alle App-Daten vollständig entfernt</li>
+            </ul>
+
+            <p><strong>Speicherort der Daten:</strong></p>
+            <ul>
+                <li>iOS: /Library/Application Support/[AppBundle]/MyData.db</li>
+                <li>Android: /data/data/com.mawrx.stiche-raten/files/MyData.db</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>7. Ihre Rechte</h3>
+            <ul>
+                <li><strong>Einsicht:</strong> Alle Ihre Daten sind jederzeit in der App einsehbar</li>
+                <li><strong>Löschung:</strong> Sie haben jederzeit volle Kontrolle über Ihre Daten und können diese löschen</li>
+            </ul>
+            <p>Da Ihre Daten lokal gespeichert sind, haben Sie die vollständige Kontrolle darüber.</p>
+        </div>
+
+        <div class="section">
+            <h3>8. Sicherheit</h3>
+            <ul>
+                <li>Keine Internetübertragung Ihrer Spieldaten</li>
+                <li>Die SQLite-Datenbank wird durch das Betriebssystem geschützt</li>
+                <li>Nur die App selbst kann auf die gespeicherten Daten zugreifen</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>9. Änderungen dieser Datenschutzerklärung</h3>
+            <p>
+                Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden.
+                Die jeweils aktuelle Version ist jederzeit über die verlinkte Webseite abrufbar.
+            </p>
+        </div>
+
+        <footer>
+            <p>Datenschutzerklärung für die App „Stiche-Raten"</p>
+            <p>Zuletzt aktualisiert: 22.01.2026</p>
+        </footer>
+    </div>
+</body>
+</html>
