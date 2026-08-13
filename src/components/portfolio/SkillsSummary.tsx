@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { calculateDurationLabel } from "@/lib/duration";
 
 const Section = ({ id, title, children }: { id: string; title: string; children: React.ReactNode }) => (
   <section id={id} className="scroll-mt-24">
@@ -12,8 +13,11 @@ const Section = ({ id, title, children }: { id: string; title: string; children:
   </section>
 );
 
-const Pill = ({ children }: { children: React.ReactNode }) => (
-  <Badge variant="secondary" className="mb-2 mr-2">{children}</Badge>
+const Pill = ({ since, children }: { since?: string; children: React.ReactNode }) => (
+  <Badge variant="secondary" className="mb-2 mr-2">
+    {children}
+    {since && <span className="text-muted-foreground"> · {calculateDurationLabel(since)}</span>}
+  </Badge>
 );
 
 const SkillsSummary = () => {

@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { calculateDurationLabel, formatPeriodRange } from "@/lib/duration";
 
 interface Project {
-  period: string;
+  startDate: string;
+  endDate?: string;
   title: string;
   customer?: string;
   role: string;
@@ -13,7 +15,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    period: "03/2025 – heute",
+    startDate: "03/2025",
     title: "FOCUS (Stundenerfassung, Projektplanung & Controlling)",
     customer: "Holtkamp Consulting GmbH",
     role: "Projektleiter & Lead-Developer",
@@ -50,7 +52,7 @@ const projects: Project[] = [
     note: "Teilzeitprojekt",
   },
   {
-    period: "02/2025 – heute",
+    startDate: "02/2025",
     title: "Wohngeldrechner (Mobile App)",
     role: "Fullstack-Developer",
     activities: [
@@ -75,7 +77,8 @@ const projects: Project[] = [
     note: "Geplantes Deployment im August 2025",
   },
   {
-    period: "01/2025 – 06/2025",
+    startDate: "01/2025",
+    endDate: "06/2025",
     title: "DRIVE (Reservierung & Inventarverwaltung)",
     customer: "Neuenhauser Maschinenbau GmbH",
     role: "Product Owner & Lead-Developer",
@@ -104,7 +107,8 @@ const projects: Project[] = [
     note: "Teilzeitprojekt",
   },
   {
-    period: "04/2024 – 06/2024",
+    startDate: "04/2024",
+    endDate: "06/2024",
     title: "Schulprojekt: Bewässerungsanlage",
     role: "Developer",
     activities: ["Aufbau & Verkabelung Arduino ESP32", "Weboberfläche entwickelt"],
@@ -125,7 +129,7 @@ const ExperienceTimeline = () => {
             {projects.map((p, idx) => (
               <li key={idx} className="space-y-3">
                 <div className="absolute -start-1.5 mt-1.5 size-3 rounded-full bg-primary shadow-brand" />
-                <p className="text-sm text-muted-foreground">{p.period}{p.customer ? ` · ${p.customer}` : ""}</p>
+                <p className="text-sm text-muted-foreground">{formatPeriodRange(p.startDate, p.endDate)} · {calculateDurationLabel(p.startDate, p.endDate)}{p.customer ? ` · ${p.customer}` : ""}</p>
                 <h3 className="text-lg font-semibold">{p.title}</h3>
                 <p className="text-sm">Rolle: {p.role}</p>
                 <ul className="list-disc ps-6 text-sm leading-relaxed">
